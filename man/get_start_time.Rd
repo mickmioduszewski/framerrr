@@ -2,15 +2,19 @@
 % Please edit documentation in R/main.R
 \name{get_start_time}
 \alias{get_start_time}
-\title{Get framework start time}
+\title{Get \code{framerrr} framework start time}
 \usage{
 get_start_time()
 }
 \value{
-The time the package was loaded
+The time the package was loaded.
 }
 \description{
-Get framework start time
+\code{get_start_time} returns an object of class "POSIXct" that contains time
+when \code{framerrr} was loaded
+}
+\details{
+This is function has no parameters.
 }
 \examples{
 get_start_time()

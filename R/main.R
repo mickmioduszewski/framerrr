@@ -3,9 +3,17 @@ rf <- new.env(parent = emptyenv())
 rf$start_time    <- function() Sys.time()
 rf$tz            <- function() Sys.timezone()
 
-#' Get framework start time
+#' @title
+#' Get `framerrr` framework start time
 #'
-#' @return The time the package was loaded
+#' @description
+#' `get_start_time` returns an object of class "POSIXct" that contains time
+#'   when `framerrr` was loaded
+#'
+#' @details
+#' This is function has no parameters.
+#'
+#' @return The time the package was loaded.
 #' @export
 #'
 #' @examples
