@@ -17,5 +17,6 @@ URL: https://github.com/mickmioduszewski/framerrr
 BugReports: https://github.com/mickmioduszewski/framerrr/issues
 Suggests: 
     covr,
-    spelling
+    spelling,
+    testthat
 Language: en-US
