@@ -7,15 +7,15 @@ Authors@R:
            role = c("aut", "cre"),
            email = "mick@mioduszewski.net",
            comment = c(ORCID = "0000-0002-8479-9336"))
-Description: Framerrr makes it easier to prevent bugs when porting between
-environments by separating enironment dependent information in configuration
-files. Files paths are logical and not hardcoded physically. Provides helper
-functions easing common problems in cross-environment software.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: Framerrr makes it easier to prevent bugs when porting between environments by separating environment dependent information in configuration files. Files paths are logical and not physically hard coded. Provides helper functions easing common problems in cross-environment software.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 URL: https://github.com/mickmioduszewski/framerrr
 BugReports: https://github.com/mickmioduszewski/framerrr/issues
+Suggests: 
+    covr,
+    spelling
+Language: en-US
