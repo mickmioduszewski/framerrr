@@ -1,5 +1,5 @@
 Package: framerrr
-Title: Framework That Increases Portability Decreases Maintenance Errors
+Title: Framework that Increases Portability Decreases Maintenance Errors
 Version: 0.1.0
 Authors@R: 
     person(given = "Mick",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "mick@mioduszewski.net",
            comment = c(ORCID = "0000-0002-8479-9336"))
-Description: Framerrr makes it easier to prevent bugs when developing, testing 
+Description: This package makes it easier to prevent bugs when developing, testing 
     and deploying or porting between 
     environments, e.g. machines, users or operating systems. It moves 
     environment dependent information to 
