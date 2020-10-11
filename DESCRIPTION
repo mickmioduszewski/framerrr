@@ -1,6 +1,6 @@
 Package: framerrr
 Title: Framework That Increases Portability Decreases Maintenance Errors
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person(given = "Mick",
            family = "Mioduszewski",
