@@ -1,13 +1,16 @@
 Package: framerrr
-Title: What the Package Does (One Line, Title Case)
+Title: Framework That Increases Portability Decreases Maintenance Errors
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Mick",
+           family = "Mioduszewski",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "mick@mioduszewski.net",
+           comment = c(ORCID = "0000-0002-8479-9336"))
+Description: Framerrr makes it easier to prevent bugs when porting between
+environments by separating enironment dependent information in configuration
+files. Files paths are logical and not hardcoded physically. Provides helper
+functions easing common problems in cross-environment software.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
