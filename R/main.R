@@ -91,9 +91,9 @@ make_config <- function() {
   if (is.na(rf$global_config)) {
     message("global configuration file ignored as requested")
   } else if (file.exists(rf$global_config)) {
-    source(rf$global_config, local = rf)
+    source(rf$global_config[[1]], local = rf)
   } else {
-    stop("global configuration does not exist")
+    stop("Expected global configuration file, but it does not exist")
   }
 
   if (is.na(rf$local_config)) {
@@ -263,7 +263,7 @@ clean_file_name <-
              collapse = ""
            )) {
     out <- gsub(blacklist, " ", inf)
-    out <- gsub("\\s+" , " ", out)
+    out <- gsub("\\s+", " ", out)
     out <- trimws(out, which = "both") # trim white space
     out <- paste(out, suffix, sep = "")
     return(out)
