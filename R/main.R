@@ -202,16 +202,41 @@ get_var <- function(var_name) {
   return(invisible(NULL))
 }
 
+
 get_start_time <- function() rf$start_time
 
-clean_file_name <- function(in1 = "input string for file name", suffix = "") {
-  out <- gsub(paste0("^ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-                     "Zabcdefghijklmnopqrstuvwxyz",
-                     "\\s_&\\.\\-]"),
-              " ",
-              in1)
-    out <- gsub("\\s+", " ", out) # multiple space into single
-    out <- trimws(out, which = "both") # trim white space
-    out <- paste(out, suffix, sep = "")
-    return(out)
+#' @title
+#' Clean a file name string from illegal characters
+#'
+#' @description
+#' Make a string used as a file name a legal file name on a file system
+#'   by removing illegal characters
+#'
+#' @details
+#' File systems tolerate certain characters in a file name. Some characters
+#'   are not legal. This function will replace all characters that are not
+#'   white listed and replace them with space. Multiple consecutive spaces will
+#'   be replaced with a single one and the leading and trailing spaces will
+#'   be stripped.
+#'
+#' @param inf A character vector to be cleaned into a file name component.
+#' @param suffix A suffix to be attached if any, e.g. .PDF or .document.
+#' @param blacklist A regular expression character class used as a blacklist,
+#'   i.e. the negated white list of characters.
+#' @return Cleaned file name component.
+#' @export
+#'
+#' @examples
+#' clean_file_name(c("fred123", "some file", "bad file##", "w##H$A%t^"))
+clean_file_name <- function(inf = "file name",
+                            suffix = "",
+                            blacklist = paste0("[^ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                                               "abcdefghijklmnopqrstuvwxyz",
+                                               "0123456789",
+                                               "\\s_&\\.\\-]")) {
+  out <- gsub(blacklist, " ", inf)
+  out <- gsub("\\s+" , " ", out)
+  out <- trimws(out, which = "both") # trim white space
+  out <- paste(out, suffix, sep = "")
+  return(out)
 }
