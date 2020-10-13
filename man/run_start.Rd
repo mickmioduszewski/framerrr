@@ -6,9 +6,10 @@
 \usage{
 run_start(
   project = "project",
-  dref = "",
+  envir = "default",
+  dref = vector(mode = "character", length = 0),
   tz = Sys.timezone(),
-  log = c("f_log"),
+  log = "f_log",
   global_config = file.path(dirname(getwd()), "config", "config.R"),
   local_config = file.path(getwd(), "config.R"),
   f_log = list(file = "log.csv", dir = "d_internal"),
@@ -22,6 +23,8 @@ run_start(
 \item{project}{A character vector of length 1 containing the name of the
 project.}
 
+\item{envir}{A name for the environment.}
+
 \item{dref}{A character vector with the list of
 configuration entries that contain multiple definitions,
 each referring to a specific named operating environment.}
@@ -32,10 +35,12 @@ each referring to a specific named operating environment.}
 location for the project.}
 
 \item{global_config}{A definition of the location of the global
-configuration file}
+configuration file. Make it NA if you don't want a global configuration
+file.}
 
 \item{local_config}{A definition of the location of the local
-configuration file}
+configuration file. Make it NA if you don't want a global configuration
+file.}
 
 \item{f_log}{A definition of the log
 location for the project.}
@@ -59,5 +64,5 @@ Sets defaults and starts the framework
 This is function has no parameters.
 }
 \examples{
-run_start()
+run_start(global_config = NA, local_config = NA)
 }
